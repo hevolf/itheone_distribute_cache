@@ -1,0 +1,23 @@
+server:
+  port: 8090
+  compression:
+    enabled: true
+  tomcat:
+    connection-timeout: 3000
+
+spring:
+  redis:
+    host: 192.168.68.10
+    port: 6379
+
+  datasource:
+    url: jdbc:mysql://192.168.68.10:3307/distribute_cache?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: root
+    driverClassName: com.mysql.jdbc.Driver
+    test-on-borrow: false
+    test-while-idle: true
+    time-between-eviction-runs-millis: 3600000
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
